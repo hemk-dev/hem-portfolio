@@ -1,0 +1,55 @@
+{
+  "integrations": [
+    {
+      "name": "Hotelbeds",
+      "description": "Global hotel inventory and booking API integration",
+      "challenges": [
+        "Complex authentication with token refresh mechanisms",
+        "Rate limiting: 100 requests per second",
+        "Large response payloads requiring pagination",
+        "Data normalization across multiple hotel property types"
+      ],
+      "solutions": [
+        "Implemented token caching with automatic refresh",
+        "Built request queuing system to respect rate limits",
+        "Used streaming for large dataset imports",
+        "Created unified data model mapping different property structures"
+      ],
+      "technologies": ["Node.js", "PostgreSQL", "Redis"]
+    },
+    {
+      "name": "Mystifly",
+      "description": "Flight inventory and booking API integration",
+      "challenges": [
+        "Real-time availability checks with strict timeout requirements",
+        "Complex pricing structures with multiple fare types",
+        "Booking confirmation webhook handling",
+        "Handling flight cancellations and modifications"
+      ],
+      "solutions": [
+        "Implemented async request pattern with timeout handling",
+        "Built pricing normalization layer for consistent display",
+        "Created idempotent webhook processor",
+        "Designed state machine for booking lifecycle management"
+      ],
+      "technologies": ["Node.js", "MongoDB", "WebSockets"]
+    },
+    {
+      "name": "PKFARE",
+      "description": "Travel supplier API for flights and hotels",
+      "challenges": [
+        "Large dataset synchronization (millions of records)",
+        "Incremental updates vs full sync trade-offs",
+        "API versioning and backward compatibility",
+        "Error recovery for failed sync operations"
+      ],
+      "solutions": [
+        "Implemented chunked bulk import strategy",
+        "Built incremental sync with change detection",
+        "Created version adapter layer for API changes",
+        "Designed retry mechanism with exponential backoff"
+      ],
+      "technologies": ["Node.js", "PostgreSQL", "AWS S3"]
+    }
+  ]
+}

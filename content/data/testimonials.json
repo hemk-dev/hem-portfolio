@@ -1,0 +1,18 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "quote": "Working with Hem on the Synvia Pharma website was a smooth and rewarding experience. He delivered a clean, professional site that perfectly represents our global brand and makes inquiries seamless for our clients.",
+      "author": "Aditya",
+      "role": "Project Lead",
+      "company": "Synvia Pharma"
+    },
+    {
+      "id": "2",
+      "quote": "Hem delivered outstanding work on our web application project. His expertise in both frontend and backend made the entire development process smooth and efficient. Highly recommended for any full-stack development work!",
+      "author": "Randy Long",
+      "role": "Client",
+      "company": ""
+    }
+  ]
+}

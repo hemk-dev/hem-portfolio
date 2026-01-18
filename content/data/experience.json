@@ -1,0 +1,284 @@
+{
+  "workExperience": [
+    {
+      "company": "OneClick IT Consultancy",
+      "role": "Software Engineer Level - 1",
+      "duration": "Jul 2024 - Present",
+      "location": "Ahmedabad, Gujarat",
+      "achievements": [
+        {
+          "category": "API Integrations",
+          "description": "Integrated large-scale third-party travel supplier APIs including HotelBeds, PKFare, MyStifly, and Akbar",
+          "impact": "Enabled access to 100,000+ global hotel and flight inventories, improved search accuracy and coverage"
+        },
+        {
+          "category": "Payment Systems",
+          "description": "Implemented secure payment flows by integrating Stripe via Spreedly",
+          "impact": "Supported recurring billing and digital wallets (Apple Pay, Google Pay), increased payment success rates"
+        },
+        {
+          "category": "Data Handling & Performance",
+          "description": "Maintained secure data handling using parameterized PostgreSQL queries, managed large data dumps with MongoDB",
+          "impact": "Contributed to high uptime and better performance"
+        }
+      ],
+      "technologies": ["Node.js", "PostgreSQL", "MongoDB", "Stripe", "Spreedly", "HotelBeds", "PKFare", "MyStifly"]
+    },
+    {
+      "company": "OneClick IT Consultancy",
+      "role": "Software Developer Intern",
+      "duration": "Jan 2024 - Jun 2024",
+      "achievements": [
+        {
+          "category": "Web Scraping & Data Extraction",
+          "description": "Implemented real-time flight price extraction system using Crawlee and Playwright",
+          "impact": "Enabled data analysis and comparison"
+        },
+        {
+          "category": "Scalable Platform Design",
+          "description": "Designed scalable scraping platform utilizing MySQL for data storage and comparison",
+          "impact": "Improved development efficiency"
+        }
+      ],
+      "technologies": ["Node.js", "React.js", "MySQL", "Crawlee", "Playwright"]
+    }
+  ],
+  "caseStudyProjects": [
+    {
+      "id": "ecommerce-stripe",
+      "title": "E-commerce API with Stripe Integration",
+      "subtitle": "Production-Grade Payment System",
+      "businessProblem": "Build a robust payment processing system that handles real-world complexities including failed payments, network issues, and duplicate charges while maintaining consistent order states.",
+      "architectureOverview": [
+        "RESTful API built with Node.js and Express",
+        "PostgreSQL for transactional data with strict consistency",
+        "Stripe SDK for payment processing",
+        "Webhook endpoints for async payment confirmations",
+        "Redis for idempotency key storage"
+      ],
+      "keyFeatures": [
+        {
+          "title": "Payment Flow",
+          "description": "Create Intent → Client Confirmation → Webhook Processing → Order Fulfillment"
+        },
+        {
+          "title": "Idempotency Handling",
+          "description": "Unique idempotency keys per request prevent duplicate charges during retries"
+        },
+        {
+          "title": "Refunds & Failures",
+          "description": "Graceful handling of declined cards, expired payments, and partial refunds"
+        },
+        {
+          "title": "Database Schema",
+          "description": "Normalized schema with orders, payments, and audit logs for full traceability"
+        }
+      ],
+      "technologies": ["Node.js", "Express", "PostgreSQL", "Stripe", "Redis", "Docker"],
+      "impact": "Designed a production-grade payment API ensuring safe retries and consistent order states.",
+      "securityConsiderations": [
+        "PCI compliance through Stripe tokenization",
+        "Webhook signature verification",
+        "Rate limiting on payment endpoints",
+        "Encrypted sensitive data at rest"
+      ],
+      "databaseDecisions": [
+        "ACID transactions for payment state changes",
+        "Separate audit table for compliance",
+        "Indexed queries for payment lookups"
+      ]
+    },
+    {
+      "id": "bulk-email-microservice",
+      "title": "Bulk Email Sending Microservice",
+      "subtitle": "High-Performance Campaign System",
+      "businessProblem": "Design a scalable microservice capable of sending personalized emails to thousands of recipients efficiently while handling failures gracefully and maintaining deliverability.",
+      "architectureOverview": [
+        "Microservice architecture for independent scaling",
+        "Message queue (Redis/RabbitMQ) for job distribution",
+        "Worker processes for parallel email sending",
+        "PostgreSQL for campaign and recipient data",
+        "Batch processing for database operations"
+      ],
+      "keyFeatures": [
+        {
+          "title": "Why Microservice",
+          "description": "Isolated scaling, independent deployment, and failure isolation from main application"
+        },
+        {
+          "title": "Bulk Operations",
+          "description": "Chunked processing of 10,000+ recipients with configurable batch sizes"
+        },
+        {
+          "title": "Database Performance",
+          "description": "Bulk inserts, indexed queries, and connection pooling for high throughput"
+        },
+        {
+          "title": "Failure Handling",
+          "description": "Dead letter queues, exponential backoff retries, and bounce tracking"
+        }
+      ],
+      "technologies": ["Express.js", "PostgreSQL", "Redis", "BullMQ", "Docker", "RabbitMQ"],
+      "impact": "Optimized bulk operations for performance and reliability while keeping system cost-effective.",
+      "securityConsiderations": [
+        "Rate limiting to prevent abuse",
+        "Email validation and sanitization",
+        "Unsubscribe compliance (CAN-SPAM)"
+      ],
+      "databaseDecisions": [
+        "Raw SQL for bulk inserts vs ORM overhead",
+        "Partitioned tables for campaign history",
+        "Read replicas for reporting queries"
+      ]
+    },
+    {
+      "id": "lambda-webhook-processor",
+      "title": "AWS Lambda Webhook Processor",
+      "subtitle": "Serverless Event Processing",
+      "businessProblem": "Process high-volume payment and supplier webhooks reliably without maintaining always-on infrastructure, while ensuring no events are lost during traffic spikes.",
+      "architectureOverview": [
+        "AWS Lambda functions for event processing",
+        "API Gateway for webhook endpoints",
+        "SQS for event buffering and retry handling",
+        "DynamoDB for event deduplication",
+        "CloudWatch for monitoring and alerts"
+      ],
+      "keyFeatures": [
+        {
+          "title": "Why Serverless",
+          "description": "Pay-per-execution pricing, automatic scaling, zero server maintenance"
+        },
+        {
+          "title": "Cost & Scalability",
+          "description": "Handles 0 to 10,000+ requests/minute with no capacity planning"
+        },
+        {
+          "title": "Cold Start Mitigation",
+          "description": "Provisioned concurrency for critical paths, optimized bundle sizes"
+        },
+        {
+          "title": "IAM Security",
+          "description": "Least-privilege roles, VPC integration for database access"
+        }
+      ],
+      "technologies": ["AWS Lambda", "API Gateway", "SQS", "DynamoDB", "Node.js", "CloudWatch"],
+      "impact": "Built a cost-effective, infinitely scalable webhook processor with 99.9% reliability.",
+      "securityConsiderations": [
+        "Webhook signature verification",
+        "IAM roles with minimal permissions",
+        "VPC security groups for RDS access",
+        "Secrets Manager for credentials"
+      ],
+      "databaseDecisions": [
+        "DynamoDB for high-speed deduplication checks",
+        "TTL for automatic cleanup of processed events",
+        "Integration with main PostgreSQL via VPC"
+      ]
+    },
+    {
+      "id": "payment-subscription-platform",
+      "title": "Payment & Subscription Management Platform",
+      "subtitle": "Backend System for Payments and Billing",
+      "businessProblem": "Businesses need a reliable backend system to handle one-time payments, subscriptions, and recurring billing while safely processing webhooks, retries, and failures. The challenge was to build a system that handles real payment flows without double charges or data inconsistencies.",
+      "architectureOverview": [
+        "REST APIs for payments, subscriptions, and customer management",
+        "Stripe integration for payment processing and billing",
+        "Webhook handling for asynchronous payment events",
+        "Redis-backed queues for background jobs and retries",
+        "PostgreSQL for transactional and billing data"
+      ],
+      "keyFeatures": [
+        {
+          "title": "Payment & Subscription APIs",
+          "description": "APIs to create one-time payments and manage subscription lifecycles, including creation, updates, cancellations, and renewals."
+        },
+        {
+          "title": "Webhook Processing",
+          "description": "Secure and idempotent webhook handling to process payment events such as successful charges, failed payments, and subscription updates."
+        },
+        {
+          "title": "Background Jobs & Retries",
+          "description": "Asynchronous processing for retries, reconciliation tasks, and delayed actions using Redis-based queues."
+        },
+        {
+          "title": "Data Consistency & Safety",
+          "description": "Idempotency keys and transaction handling ensure payments are processed exactly once, even during retries or network failures."
+        }
+      ],
+      "technologies": [
+        "Node.js",
+        "REST APIs",
+        "PostgreSQL",
+        "Redis",
+        "Stripe",
+        "Docker"
+      ],
+      "impact": "Delivered a backend platform capable of handling real payment workflows with predictable behavior, reduced failure impact, and clear auditability.",
+      "securityConsiderations": [
+        "Secure handling of payment-related data",
+        "Webhook signature verification",
+        "API authentication and authorization",
+        "Rate limiting and request validation"
+      ],
+      "databaseDecisions": [
+        "PostgreSQL used for transactional payment and subscription data",
+        "Proper indexing for fast lookups on payments and subscriptions",
+        "Normalized schema to support reporting and reconciliation"
+      ]
+    },
+    {
+      "id": "ec2-backend-deployment",
+      "title": "Backend Application Deployment on AWS EC2",
+      "subtitle": "Production Deployment & Infrastructure Setup",
+      "businessProblem": "Many backend applications need predictable performance, controlled costs, and full control over the runtime environment. The challenge was to deploy and operate a backend service on EC2 while ensuring reliability, security, and easy maintenance.",
+      "architectureOverview": [
+        "Node.js backend deployed on AWS EC2 instances",
+        "Nginx used as a reverse proxy and load balancer",
+        "PostgreSQL hosted on Amazon RDS",
+        "Redis used for caching and background jobs",
+        "CloudWatch for monitoring, logs, and alerts"
+      ],
+      "keyFeatures": [
+        {
+          "title": "Manual & Automated Deployment",
+          "description": "Application deployed using Docker with repeatable build steps, enabling consistent environments across instances."
+        },
+        {
+          "title": "High Availability Setup",
+          "description": "Multiple EC2 instances behind a load balancer to reduce downtime during failures or deployments."
+        },
+        {
+          "title": "Operational Monitoring",
+          "description": "CloudWatch metrics and logs used to track application health, errors, and resource usage."
+        },
+        {
+          "title": "Cost-Aware Infrastructure",
+          "description": "Instance sizing and scaling decisions made to balance performance with infrastructure costs."
+        }
+      ],
+      "technologies": [
+        "AWS EC2",
+        "Nginx",
+        "Docker",
+        "Node.js",
+        "PostgreSQL (RDS)",
+        "Redis",
+        "CloudWatch"
+      ],
+      "impact": "Successfully deployed and operated a backend service with stable performance, controlled costs, and clear operational visibility.",
+      "securityConsiderations": [
+        "Security groups restricting inbound and outbound traffic",
+        "SSH access limited via key-based authentication",
+        "Environment variables and secrets managed securely",
+        "HTTPS termination using TLS certificates"
+      ],
+      "databaseDecisions": [
+        "Amazon RDS used for managed PostgreSQL backups and availability",
+        "Read/write separation to protect the primary database",
+        "Connection pooling to reduce database load"
+      ]
+    }
+    
+    
+  ]
+}

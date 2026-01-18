@@ -1,0 +1,162 @@
+{
+  "categories": [
+    {
+      "title": "Frontend",
+      "icon": "Layout",
+      "items": [
+        {
+          "name": "React",
+          "description": "Component-based UI development"
+        },
+        {
+          "name": "Next.js",
+          "description": "Full-stack React framework"
+        },
+        {
+          "name": "TypeScript",
+          "description": "Type-safe development"
+        },
+        {
+          "name": "Tailwind CSS",
+          "description": "Utility-first styling"
+        }
+      ]
+    },
+    {
+      "title": "Backend",
+      "icon": "Server",
+      "items": [
+        {
+          "name": "Node.js",
+          "description": "Runtime environment for server-side JavaScript"
+        },
+        {
+          "name": "Express",
+          "description": "Minimal and flexible web application framework"
+        },
+        {
+          "name": "Fastify",
+          "description": "Fast and low overhead web framework"
+        },
+        {
+          "name": "NestJS",
+          "description": "Progressive Node.js framework for scalable applications"
+        },
+        {
+          "name": "TypeScript",
+          "description": "Type-safe backend development"
+        },
+        {
+          "name": "REST APIs",
+          "description": "RESTful API design & implementation"
+        }
+      ]
+    },
+    {
+      "title": "Databases",
+      "icon": "Database",
+      "items": [
+        {
+          "name": "PostgreSQL",
+          "description": "SQL performance & large data handling"
+        },
+        {
+          "name": "MySQL",
+          "description": "Relational database management"
+        },
+        {
+          "name": "MongoDB",
+          "description": "NoSQL for flexible data structures"
+        }
+      ]
+    },
+    {
+      "title": "Infrastructure",
+      "icon": "Cloud",
+      "items": [
+        {
+          "name": "AWS EC2",
+          "description": "Scalable compute instances"
+        },
+        {
+          "name": "AWS Lambda",
+          "description": "Serverless compute"
+        },
+        {
+          "name": "AWS S3",
+          "description": "Object storage"
+        },
+        {
+          "name": "AWS IAM",
+          "description": "Security & access management"
+        }
+      ]
+    },
+    {
+      "title": "Containers",
+      "icon": "Container",
+      "items": [
+        {
+          "name": "Docker",
+          "description": "Production parity & deployment"
+        }
+      ]
+    },
+    {
+      "title": "Payments",
+      "icon": "CreditCard",
+      "items": [
+        {
+          "name": "Stripe",
+          "description": "Payment processing & subscriptions"
+        },
+        {
+          "name": "Spreedly",
+          "description": "Payment vault & tokenization"
+        }
+      ]
+    },
+    {
+      "title": "Third-party Integrations",
+      "icon": "Plug",
+      "items": [
+        {
+          "name": "Hotelbeds",
+          "description": "Hotel inventory API"
+        },
+        {
+          "name": "Mystifly",
+          "description": "Flight booking API"
+        },
+        {
+          "name": "PKFare",
+          "description": "Travel supplier API"
+        }
+      ]
+    },
+    {
+      "title": "Deployment",
+      "icon": "Rocket",
+      "items": [
+        {
+          "name": "Vercel",
+          "description": "Frontend deployment"
+        },
+        {
+          "name": "AWS",
+          "description": "Backend infrastructure"
+        }
+      ]
+    },
+    {
+      "title": "CI/CD",
+      "icon": "GitBranch",
+      "items": [
+        {
+          "name": "GitHub Actions",
+          "description": "Automated workflows & pipelines"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "services": [
+    {
+      "title": "API Development",
+      "icon": "code",
+      "description": "Build robust RESTful APIs and GraphQL endpoints with proper authentication, validation, and documentation.",
+      "features": [
+        "REST & GraphQL APIs",
+        "Authentication & Security",
+        "API Documentation",
+        "Rate Limiting"
+      ]
+    },
+    {
+      "title": "Full-stack Web Apps",
+      "icon": "globe",
+      "description": "Create complete web applications from database design to user interface with modern technologies.",
+      "features": [
+        "React/Next.js Frontend",
+        "Node.js Backend",
+        "Database Design",
+        "Responsive UI/UX"
+      ]
+    },
+    {
+      "title": "AWS Deployments",
+      "icon": "cloud",
+      "description": "Deploy and scale your applications on AWS with best practices for security and performance.",
+      "features": [
+        "EC2 & Lambda",
+        "RDS & DynamoDB",
+        "S3 & CloudFront",
+        "CI/CD Pipelines"
+      ]
+    },
+    {
+      "title": "Automation with n8n",
+      "icon": "workflow",
+      "description": "Streamline your workflows with custom automation solutions using n8n and other tools.",
+      "features": [
+        "Workflow Automation",
+        "API Integrations",
+        "Data Synchronization",
+        "Custom Scripts"
+      ]
+    },
+    {
+      "title": "Database Solutions",
+      "icon": "database",
+      "description": "Design and optimize databases for performance, scalability, and data integrity.",
+      "features": [
+        "Database Design",
+        "Query Optimization",
+        "Data Migration",
+        "Backup Strategies"
+      ]
+    },
+    {
+      "title": "Code Review & Consulting",
+      "icon": "git-pull-request",
+      "description": "Provide expert code reviews, architecture guidance, and technical consulting services.",
+      "features": [
+        "Code Review",
+        "Architecture Design",
+        "Performance Optimization",
+        "Best Practices"
+      ]
+    }
+  ]
+}
